@@ -164,17 +164,14 @@ expo build:android
 expo build:ios
 ```
 
-## Přispívání
+## Vývoj
 
-1. Forkněte projekt
-2. Vytvořte feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commitněte změny (`git commit -m 'Add some AmazingFeature'`)
-4. Pushněte do branch (`git push origin feature/AmazingFeature`)
-5. Otevřete Pull Request
+Pro lokální vývoj:
 
-## Licence
-
-Tento projekt je licencován pod MIT licencí.
+1. Klonujte repozitář
+2. Nainstalujte závislosti: `npm install`
+3. Nastavte environment proměnné
+4. Spusťte: `npm start`
 
 ## Autor
 
