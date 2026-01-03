@@ -1,152 +1,165 @@
 # Movie App
 
-Moderní mobilní aplikace pro prohlížení filmů postavená s React Native a Expo Router. Aplikace využívá TMDB API pro získávání dat o filmech a Appwrite pro ukládání oblíbených filmů.
+A modern mobile application for browsing movies built with React Native and Expo Router. The app uses TMDB API to fetch movie data and Appwrite for saving favorite movies.
 
-## Funkce
+## Features
 
-- **Vyhledávání filmů** - Vyhledejte filmy podle názvu
-- **Trending filmy** - Zobrazuje aktuálně populární filmy
-- **Detailní informace** - Kompletní informace o každém filmu
-- **Uložené filmy** - Ukládání oblíbených filmů
-- **Profil uživatele** - Správa uživatelského účtu
-- **Responzivní design** - Optimalizováno pro mobily a tablety
+- **Movie Search** - Search for movies by title
+- **Trending Movies** - Display currently popular movies
+- **Detailed Information** - Complete information about each movie
+- **Saved Movies** - Save favorite movies
+- **User Profile** - Manage user account
+- **Responsive Design** - Optimized for mobile devices and tablets
 
-## Technologie
+## Technologies
 
-- **React Native** - Cross-platform mobilní framework
-- **Expo Router** - File-based routing systém
+- **React Native** - Cross-platform mobile framework
+- **Expo Router** - File-based routing system
 - **TypeScript** - Type-safe JavaScript
-- **NativeWind** - Tailwind CSS pro React Native
-- **TMDB API** - Databáze filmů a TV pořadů
-- **Appwrite** - Backend-as-a-Service pro ukládání dat
-- **React Native Reanimated** - Pokročilé animace
+- **NativeWind** - Tailwind CSS for React Native
+- **TMDB API** - Movie and TV show database
+- **Appwrite** - Backend-as-a-Service for data storage
+- **React Native Reanimated** - Advanced animations
 
-## Požadavky
+## Requirements
 
-- Node.js (verze 18 nebo vyšší)
-- npm nebo yarn
+- Node.js (version 18 or higher)
+- npm or yarn
 - Expo CLI
-- TMDB API klíč
+- TMDB API key
 - Appwrite instance
 
-## Instalace
+## Installation
 
-1. **Klonujte repozitář**
+1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd movie_app
    ```
 
-2. **Nainstalujte závislosti**
+2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
-3. **Nastavte environment proměnné**
-   Vytvořte soubor `.env` v root adresáři:
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+
    ```env
    EXPO_PUBLIC_MOVIE_API_KEY=your_tmdb_api_key_here
    EXPO_PUBLIC_APPWRITE_ENDPOINT=your_appwrite_endpoint
    EXPO_PUBLIC_APPWRITE_PROJECT_ID=your_appwrite_project_id
    ```
 
-4. **Spusťte aplikaci**
+4. **Start the application**
    ```bash
    npm start
    ```
 
-## Spuštění na zařízení
+## Running on Device
 
 ### Android
+
 ```bash
 npm run android
 ```
 
 ### iOS
+
 ```bash
 npm run ios
 ```
 
 ### Web
+
 ```bash
 npm run web
 ```
 
-## Struktura projektu
+## Project Structure
 
 ```
 movie_app/
-├── app/                    # Expo Router stránky
-│   ├── (tabs)/            # Tab navigace
-│   │   ├── index.tsx      # Hlavní stránka
-│   │   ├── search.tsx     # Vyhledávání
-│   │   ├── saved.tsx      # Uložené filmy
-│   │   └── profile.tsx    # Uživatelský profil
+├── app/                    # Expo Router pages
+│   ├── (tabs)/            # Tab navigation
+│   │   ├── index.tsx      # Home page
+│   │   ├── search.tsx     # Search
+│   │   ├── saved.tsx      # Saved movies
+│   │   └── profile.tsx    # User profile
 │   ├── movies/
-│   │   └── [id].tsx       # Detail filmu
+│   │   └── [id].tsx       # Movie detail
 │   └── _layout.tsx        # Root layout
-├── components/            # Reusable komponenty
-│   ├── MovieCard.tsx      # Karta filmu
-│   ├── TrendingCard.tsx   # Trending film karta
-│   └── SearchBar.tsx      # Vyhledávací pole
-├── services/              # API a data služby
-│   ├── api.ts            # TMDB API funkce
-│   ├── appwrite.ts       # Appwrite konfigurace
-│   └── useFetch.ts       # Custom hook pro data fetching
-├── constants/             # Konstanty a konfigurace
-│   ├── icons.ts          # Ikony
-│   └── images.ts         # Obrázky
-├── interfaces/            # TypeScript typy
-│   └── interfaces.d.ts   # Definice typů
-└── assets/               # Statické soubory
-    ├── images/           # Obrázky
-    └── icons/            # Ikony
+├── components/            # Reusable components
+│   ├── MovieCard.tsx      # Movie card
+│   ├── TrendingCard.tsx   # Trending movie card
+│   └── SearchBar.tsx      # Search bar
+├── services/              # API and data services
+│   ├── api.ts            # TMDB API functions
+│   ├── appwrite.ts       # Appwrite configuration
+│   └── useFetch.ts       # Custom hook for data fetching
+├── constants/             # Constants and configuration
+│   ├── icons.ts          # Icons
+│   └── images.ts         # Images
+├── interfaces/            # TypeScript types
+│   └── interfaces.d.ts   # Type definitions
+└── assets/               # Static files
+    ├── images/           # Images
+    └── icons/            # Icons
 ```
 
-## Konfigurace
+## Configuration
 
 ### TMDB API
-1. Zaregistrujte se na [TMDB](https://www.themoviedb.org/settings/api)
-2. Získejte API klíč
-3. Přidejte klíč do `.env` souboru
+
+1. Sign up on [TMDB](https://www.themoviedb.org/settings/api)
+2. Get API key
+3. Add the key to `.env` file
 
 ### Appwrite
-1. Vytvořte Appwrite projekt
-2. Nastavte databázi pro ukládání oblíbených filmů
-3. Přidejte endpoint a project ID do `.env` souboru
 
-## Použití
+1. Create an Appwrite project
+2. Set up a database for storing favorite movies
+3. Add endpoint and project ID to `.env` file
 
-### Hlavní stránka
-- Zobrazuje trending filmy
-- Seznam nejnovějších filmů
-- Vyhledávací pole
+## Usage
 
-### Vyhledávání
-- Vyhledejte filmy podle názvu
-- Filtrování výsledků
-- Navigace na detail filmu
+### Home Page
 
-### Detail filmu
-- Kompletní informace o filmu
-- Budget a revenue
-- Žánry a produkční společnosti
-- Hodnocení a recenze
+- Displays trending movies
+- List of latest movies
+- Search bar
 
-### Uložené filmy
-- Seznam oblíbených filmů
-- Možnost odebrat z oblíbených
+### Search
+
+- Search movies by title
+- Filter results
+- Navigate to movie details
+
+### Movie Detail
+
+- Complete movie information
+- Budget and revenue
+- Genres and production companies
+- Ratings and reviews
+
+### Saved Movies
+
+- List of favorite movies
+- Option to remove from favorites
 
 ## Design
 
-Aplikace používá moderní design s:
-- Tmavým tématem
-- Gradient pozadí
-- Animacemi a přechody
-- Responzivním layoutem
-- Intuitivní navigací
+The app uses modern design with:
 
-## Testování
+- Dark theme
+- Gradient backgrounds
+- Animations and transitions
+- Responsive layout
+- Intuitive navigation
+
+## Testing
 
 ```bash
 npm run lint
@@ -155,46 +168,48 @@ npm run lint
 ## Build
 
 ### Android APK
+
 ```bash
 expo build:android
 ```
 
 ### iOS IPA
+
 ```bash
 expo build:ios
 ```
 
-## Vývoj
+## Development
 
-Pro lokální vývoj:
+For local development:
 
-1. Klonujte repozitář
-2. Nainstalujte závislosti: `npm install`
-3. Nastavte environment proměnné
-4. Spusťte: `npm start`
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Set up environment variables
+4. Run: `npm start`
 
-## Autor
+## Author
 
-Vytvořeno s pomocí React Native a Expo
+Created with React Native and Expo
 
-## Užitečné odkazy
+## Useful Links
 
 - [Expo Documentation](https://docs.expo.dev/)
 - [React Native Documentation](https://reactnative.dev/)
 - [TMDB API Documentation](https://developers.themoviedb.org/)
 - [Appwrite Documentation](https://appwrite.io/docs)
 
-## Známé problémy
+## Known Issues
 
-- [ ] Offline režim není implementován
-- [ ] Push notifikace nejsou nastaveny
-- [ ] Social sharing funkcionalita chybí
+- [ ] Offline mode is not implemented
+- [ ] Push notifications are not set up
+- [ ] Social sharing functionality is missing
 
 ## Roadmap
 
-- [ ] Implementace offline režimu
-- [ ] Přidání push notifikací
-- [ ] Social sharing funkcionalita
+- [ ] Implement offline mode
+- [ ] Add push notifications
+- [ ] Social sharing functionality
 - [ ] Dark/Light mode toggle
-- [ ] Pokročilé filtry vyhledávání
-- [ ] Recenze a hodnocení filmů
+- [ ] Advanced search filters
+- [ ] Movie reviews and ratings
