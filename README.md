@@ -15,7 +15,6 @@ A modern mobile application for browsing movies built with React Native and Expo
 
 - **React Native** - Cross-platform mobile framework
 - **Expo Router** - File-based routing system
-- **TypeScript** - Type-safe JavaScript
 - **NativeWind** - Tailwind CSS for React Native
 - **TMDB API** - Movie and TV show database
 - **Appwrite** - Backend-as-a-Service for data storage
